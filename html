@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petal — Get your help from our product</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-dot"></span>
+      Petal
+      <span class="logo-lab">Lab</span>
+    </a>
+
+    <ul class="nav-center" id="navLinks">
+      <li><a href="#plans">Cards <span class="arrow">▾</span></a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">App</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="btn-ghost">Login</button>
+      <button class="btn-red">Apply now →</button>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════ HERO ════════════════════════════════ -->
+<section class="hero">
+  <div class="wrap">
+    <div data-a="up">
+      <h1>Get your help<br>from our <span class="hl">product</span></h1>
+      <p class="hero-sub">Welcome to credit, no experience necessary.</p>
+      <div class="hero-btns">
+        <button class="btn-red hero-cta">Apply now →</button>
+      </div>
+    </div>
+
+    <!-- Dashboard mock -->
+    <div class="hero-dashboard" data-a="pop" style="animation-delay:.15s">
+
+      <!-- Top metrics -->
+      <div class="db-top">
+        <div class="db-metric">
+          <div class="db-metric-label">Total Balance</div>
+          <div class="db-metric-val">Rp 5.700.000</div>
+        </div>
+        <div class="db-metric">
+          <div class="db-metric-label">Savings</div>
+          <div class="db-metric-val plus">+Rp 121.000</div>
+        </div>
+        <div class="db-metric">
+          <div class="db-metric-label">Expense</div>
+          <div class="db-metric-val minus">-Rp 5.700.000</div>
+        </div>
+      </div>
+
+      <!-- Charts row -->
+      <div class="db-charts">
+        <!-- Line chart -->
+        <div class="db-chart-panel">
+          <div class="db-chart-header">
+            <div>
+              <div class="db-chart-title">Analytics</div>
+              <div class="db-chart-val">Rp 121.000</div>
+              <div class="db-chart-sub">You saved 22% more than last month 🔥</div>
+            </div>
+            <div style="display:flex;gap:5px;align-items:center;">
+              <span class="db-ctrl-pill">Al <span style="font-size:8px">▾</span></span>
+              <span class="db-ctrl-pill">Weekly <span style="font-size:8px">▾</span></span>
+            </div>
+          </div>
+          <div class="db-legend">
+            <span><span class="db-legend-dot" style="background:#e53935"></span>Income</span>
+            <span><span class="db-legend-dot" style="background:#42a5f5"></span>Expense</span>
+          </div>
+          <canvas id="chart1" height="100"></canvas>
+        </div>
+
+        <!-- Bar chart -->
+        <div class="db-chart-panel">
+          <div class="db-chart-header">
+            <div>
+              <div class="db-chart-title">Analytics</div>
+              <div class="db-chart-val">Rp 121.000</div>
+              <div class="db-chart-sub">You saved 22% more than last month 🔥</div>
+            </div>
+            <div style="display:flex;gap:5px;align-items:center;">
+              <span class="db-ctrl-pill">📊 <span style="font-size:8px">▾</span></span>
+              <span class="db-ctrl-pill">Weekly <span style="font-size:8px">▾</span></span>
+            </div>
+          </div>
+          <div class="db-legend">
+            <span><span class="db-legend-dot" style="background:#e53935"></span>Income</span>
+            <span><span class="db-legend-dot" style="background:#42a5f5"></span>Expense</span>
+          </div>
+          <canvas id="chart2" height="100"></canvas>
+        </div>
+      </div>
+    </div><!-- /hero-dashboard -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ ABOUT ════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <p class="eyebrow">ABOUT</p>
+    <h2 class="section-h" data-a="up">Boost the odds of card approval.</h2>
+    <div class="about-grid" data-a="up" style="animation-delay:.1s">
+
+      <div class="about-item">
+        <div class="about-icon mono">( )<br>{ }</div>
+        <h3>Link a bank account.</h3>
+        <p>Petal quickly and securely uses bank data (policy and secure info) during the final application.</p>
+      </div>
+
+      <div class="about-item">
+        <div class="about-icon mono">( )<br>( )</div>
+        <h3>Show off financial history.</h3>
+        <p>Petal can look beyond your credit score and consider responsible spending and saving behaviors.</p>
+      </div>
+
+      <div class="about-item">
+        <div class="about-icon" style="font-size:26px">⚙</div>
+        <h3>Unlock the best offer available.</h3>
+        <p>With bank data, the best approval offer can be unlocked. Limit to those who would otherwise be declined.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ PLANS ════════════════════════════════ -->
+<section class="plans" id="plans">
+  <div class="wrap">
+    <p class="eyebrow">FEATURED CARDS</p>
+    <h2 class="section-h" data-a="up">Solutions for All Credit Journeys</h2>
+
+    <div class="plans-grid" data-a="up" style="animation-delay:.1s">
+
+      <!-- Card 1 -->
+      <div class="plan-card">
+        <div class="plan-card-top">
+          <div>
+            <div class="plan-title">Card 1</div>
+            <div class="plan-sub">No annual fee</div>
+          </div>
+          <div class="plan-card-icon"></div>
+        </div>
+        <ul class="plan-list">
+          <li><span class="pl-label">Annual membership fee</span><span class="pl-val muted">None of any kind</span></li>
+          <li><span class="pl-label">Cash Back</span><span class="pl-val">1% – 25%</span></li>
+          <li><span class="pl-label">Credit limit</span><span class="pl-val">$300 – $10,000</span></li>
+          <li><span class="pl-label">Variable APR</span><span class="pl-val">22.24% – 31.24%</span></li>
+          <li><span class="pl-label">Path to a credit limit increase</span></li>
+        </ul>
+        <button class="plan-btn-outline">Learn more</button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="plan-card">
+        <div class="plan-card-top">
+          <div>
+            <div class="plan-title">Card 2</div>
+            <div class="plan-sub">Build credit without an annual membership fee</div>
+          </div>
+          <div class="plan-card-icon"></div>
+        </div>
+        <ul class="plan-list">
+          <li><span class="pl-label">Annual membership fee</span><span class="pl-val muted">$27</span></li>
+          <li><span class="pl-label">Cash Back</span><span class="pl-val">at select merchants</span></li>
+          <li><span class="pl-label">Credit limit</span><span class="pl-val">$200 – $10,000</span></li>
+          <li><span class="pl-label">Variable APR</span><span class="pl-val">25.24% – 34.74%</span></li>
+          <li><span class="pl-label">Path to a credit limit increase</span></li>
+        </ul>
+        <button class="plan-btn-outline">Learn more</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="plan-card">
+        <div class="plan-card-top">
+          <div>
+            <div class="plan-title">Card 3</div>
+            <div class="plan-sub">10 rewards, no fees</div>
+          </div>
+          <div class="plan-card-icon"></div>
+        </div>
+        <ul class="plan-list">
+          <li><span class="pl-label">Annual membership fee</span><span class="pl-val muted">$147</span></li>
+          <li><span class="pl-label">Cash Back</span><span class="pl-val">at select merchants</span></li>
+          <li><span class="pl-label">Credit limit</span><span class="pl-val">$300 – $10,000</span></li>
+          <li><span class="pl-label">Variable APR</span><span class="pl-val">33.44% – 35.74%</span></li>
+          <li><span class="pl-label">Path to a credit limit increase</span></li>
+        </ul>
+        <button class="plan-btn-outline">Learn more</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FEATURES (dark) ══════════════════════ -->
+<section class="features" id="features">
+  <div class="wrap">
+    <p class="eyebrow">CARD NUMBERS</p>
+    <h2 class="section-h" data-a="up">A card that works as hard as you do.</h2>
+
+    <div class="features-grid3" data-a="up" style="animation-delay:.1s">
+
+      <div class="feat-item">
+        <div class="feat-icon-wrap r">💳</div>
+        <h3>Designed to build credit.</h3>
+        <p>We report to the major bureaus so you can grow your credit score with responsible credit use.</p>
+      </div>
+
+      <div class="feat-item">
+        <div class="feat-icon-wrap b">📱</div>
+        <h3>Pay from your phone.</h3>
+        <p>Add your Petal card to your mobile wallet for easy, on-the-go payments.</p>
+      </div>
+
+      <div class="feat-item">
+        <div class="feat-icon-wrap g">⚡</div>
+        <h3>Tap to it.</h3>
+        <p>Tap apart with contactless payment technology for fast &amp; secure checkouts — simply tap and go.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ REVIEWS ══════════════════════════════ -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <p class="eyebrow">TESTIMONIALS</p>
+    <h2 class="section-h" data-a="up">Hear from real Petal credit-builders.</h2>
+
+    <div class="reviews-row" data-a="up" style="animation-delay:.1s">
+
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"I've always talked about Spain but flights were too expensive. Thanks to one of your surprise sale notifications, our flights were only around $600 for two!"</p>
+        <div class="rev-author">
+          <div class="rev-ava ava1">JC</div>
+          <div><strong>Drew C.</strong><span>Member since 2019</span></div>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"I've always talked about Spain but flights were too expensive. Thanks to one of your surprise sale notifications, our flights were only around $600 for two!"</p>
+        <div class="rev-author">
+          <div class="rev-ava ava2">JC</div>
+          <div><strong>Drew C.</strong><span>Member since 2019</span></div>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"I've always talked about Spain but flights were too expensive. Thanks to one of your surprise sale notifications, our flights were only around $600 for two!"</p>
+        <div class="rev-author">
+          <div class="rev-ava ava3">JC</div>
+          <div><strong>Drew C.</strong><span>Member since 2019</span></div>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"I've always talked about Spain but flights were too expensive. Thanks to one of your surprise sale notifications, our flights were only around $600 for two!"</p>
+        <div class="rev-author">
+          <div class="rev-ava ava4">JC</div>
+          <div><strong>Drew C.</strong><span>Member since 2019</span></div>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"I've always talked about Spain but flights were too expensive. Thanks to one of your surprise sale notifications, our flights were only around $600 for two!"</p>
+        <div class="rev-author">
+          <div class="rev-ava ava5">JC</div>
+          <div><strong>Drew C.</strong><span>Member since 2019</span></div>
+        </div>
+      </div>
+
+    </div><!-- /reviews-row -->
+
+    <div class="reviews-nav">
+      <button class="nav-arr">←</button>
+      <button class="nav-arr">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <h4>Build Credit</h4>
+        <ul>
+          <li><a href="#">Card 1</a></li>
+          <li><a href="#">Card 2</a></li>
+          <li><a href="#">Card 3</a></li>
+          <li><a href="#">App</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Partners</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get the Petal App</h4>
+        <div class="app-btns">
+          <a href="#" class="app-btn">
+            <span class="app-btn-icon">🍎</span>
+            <div class="app-btn-text">
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </div>
+          </a>
+          <a href="#" class="app-btn">
+            <span class="app-btn-icon">▶</span>
+            <div class="app-btn-text">
+              <small>Get it on</small>
+              <strong>Google Play</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <div class="footer-bot">
+      <div class="social-row">
+        <a href="#" class="soc-btn" aria-label="Instagram">◈</a>
+        <a href="#" class="soc-btn" aria-label="Twitter">𝕏</a>
+        <a href="#" class="soc-btn" aria-label="Twitter2">🐦</a>
+        <a href="#" class="soc-btn" aria-label="LinkedIn">in</a>
+      </div>
+      <span>© 2024 Petal Card, Inc. All rights reserved. Member FDIC. Issued by WebBank.</span>
+      <span>Privacy Policy · Terms of Service</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════ SCRIPTS ═══════════════════════════════ -->
+<script>
+/* ── Navbar scroll shadow ── */
+const nav    = document.getElementById('nav');
+const burger = document.getElementById('burger');
+const links  = document.getElementById('navLinks');
+
+window.addEventListener('scroll', () =>
+  nav.classList.toggle('scrolled', window.scrollY > 20)
+);
+
+/* ── Burger toggle ── */
+burger.addEventListener('click', () => {
+  links.classList.toggle('open');
+  const open = links.classList.contains('open');
+  burger.querySelectorAll('span').forEach((s, i) => {
+    if (i === 0) s.style.transform = open ? 'translateY(7px) rotate(45deg)'  : '';
+    if (i === 1) s.style.opacity   = open ? '0' : '';
+    if (i === 2) s.style.transform = open ? 'translateY(-7px) rotate(-45deg)': '';
+  });
+});
+document.addEventListener('click', e => {
+  if (!nav.contains(e.target)) {
+    links.classList.remove('open');
+    burger.querySelectorAll('span').forEach(s => {
+      s.style.transform = '';
+      s.style.opacity   = '';
+    });
+  }
+});
+
+/* ── Scroll animations ── */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('[data-a]').forEach(el => io.observe(el));
+
+/* ── Charts ── */
+Chart.defaults.font.family = "'DM Sans', sans-serif";
+
+const chartData = {
+  labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug'],
+  income:  [65000, 72000, 58000, 90000, 75000, 110000, 95000, 121000],
+  expense: [45000, 55000, 70000, 50000, 85000, 60000,  78000, 90000]
+};
+
+/* Line chart */
+new Chart(document.getElementById('chart1'), {
+  type: 'line',
+  data: {
+    labels: chartData.labels,
+    datasets: [
+      {
+        label: 'Income',
+        data: chartData.income,
+        borderColor: '#e53935', borderWidth: 2,
+        pointRadius: 3, pointBackgroundColor: '#e53935',
+        tension: 0.4, fill: false
+      },
+      {
+        label: 'Expense',
+        data: chartData.expense,
+        borderColor: '#42a5f5', borderWidth: 2,
+        pointRadius: 3, pointBackgroundColor: '#42a5f5',
+        tension: 0.4, fill: false
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 9 }, color: '#aaa' } },
+      y: { grid: { color: '#f0f0f0' }, ticks: { font: { size: 9 }, color: '#aaa', callback: v => v / 1000 + 'k' } }
+    },
+    animation: { duration: 1400 }
+  }
+});
+
+/* Bar chart */
+new Chart(document.getElementById('chart2'), {
+  type: 'bar',
+  data: {
+    labels: chartData.labels,
+    datasets: [
+      {
+        label: 'Income',
+        data: chartData.income,
+        backgroundColor: 'rgba(229,57,53,.75)',
+        borderRadius: 3, borderSkipped: false
+      },
+      {
+        label: 'Expense',
+        data: chartData.expense,
+        backgroundColor: 'rgba(66,165,245,.75)',
+        borderRadius: 3, borderSkipped: false
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 9 }, color: '#aaa' } },
+      y: { grid: { color: '#f0f0f0' }, ticks: { font: { size: 9 }, color: '#aaa', callback: v => v / 1000 + 'k' } }
+    },
+    animation: { duration: 1200 }
+  }
+});
+</script>
+</body>
+</html>
